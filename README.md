@@ -31,7 +31,8 @@ recsys_project/
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-org/recsys-bootcamp.git](https://github.com/your-org/recsys-bootcamp.git)
+   git clone [https://github.com/InspireSaplingAI/Movie-Recommendation-System](https://github.com/InspireSaplingAI/Movie-Recommendation-System)
+   cd Movie-Recommendation-System
    cd recsys-bootcamp
    ```
 
