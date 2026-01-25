@@ -1,0 +1,14 @@
+# Model-specific hyperparameters
+popularity:
+  top_k: 10
+
+matrix_factorization:
+  n_factors: 50
+  n_epochs: 20
+  reg: 0.01
+
+neural_cf:
+  embedding_dim: 64
+  hidden_layers: [128, 64]
+  epochs: 10
+  lr: 0.001

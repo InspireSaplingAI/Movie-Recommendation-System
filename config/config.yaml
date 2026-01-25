@@ -1,0 +1,11 @@
+# Basic configuration placeholders (paths & hyperparameters)
+
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  models: data/models
+
+training:
+  epochs: 5
+  batch_size: 256
+  learning_rate: 0.001
