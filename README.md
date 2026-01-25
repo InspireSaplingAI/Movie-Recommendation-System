@@ -12,19 +12,35 @@ The curriculum covers the full lifecycle: data preprocessing, feature engineerin
 Unlike standard data science courses, this project enforces an **engineering-first** directory structure to promote modularity and scalability.
 
 ```text
-recsys_project/
-├── config/                 # Configuration files (YAML) for paths & hyperparameters
-├── data/                   # Dataset storage (Raw, Processed, Models)
-├── notebooks/              # Jupyter notebooks for exploration & reporting
-├── src/                    # Source code modules
-│   ├── data_loader.py      # Data ingestion & preprocessing pipelines
-│   ├── models/             # Abstract base classes & model implementations
-│   ├── trainer.py          # Training loops & experiment tracking
-│   └── inference.py        # Inference logic & cold-start handling
-├── app/                    # Deployment layer
-│   ├── main.py             # FastAPI backend
-│   └── frontend.py         # Streamlit dashboard
-└── requirements.txt        # Project dependencies
+project_root/
+├── config/                 # [MLE] Configuration files (hyperparameters & paths)
+│   ├── config.yaml
+│   └── model_params.yaml
+├── data/                   # Data storage (usually added to .gitignore)
+│   ├── raw/                # Raw dataset (e.g., MovieLens)
+│   ├── processed/          # Cleaned data & feature matrices
+│   └── models/             # Saved trained models (.pkl, .pt)
+├── notebooks/              # [Teaching] Experiments & Exploration
+│   ├── 01_data_exploration.ipynb    # Session 1: EDA
+│   ├── 02_classic_cf.ipynb          # Session 2: Collaborative Filtering
+│   └── 03_deep_learning_ncf.ipynb   # Session 3: Deep Learning
+├── src/                    # [Core] Production-ready source code
+│   ├── __init__.py
+│   ├── data_loader.py      # Data loading & preprocessing pipelines
+│   ├── metrics.py          # Custom metrics (Precision@K, Recall@K)
+│   ├── models/             # Model definitions
+│   │   ├── __init__.py
+│   │   ├── base.py         # [MLE] Abstract Base Class interface
+│   │   ├── popularity.py   # Session 1: Statistical/Baseline model
+│   │   ├── matrix_factorization.py # Session 2: Traditional ML
+│   │   └── neural_cf.py    # Session 3: Deep Learning
+│   ├── trainer.py          # Training pipeline & experiment tracking
+│   └── inference.py        # Inference logic & service encapsulation
+├── app/                    # [Session 4] Deployment & Demo
+│   ├── main.py             # FastAPI backend service
+│   └── frontend.py         # Streamlit frontend dashboard
+├── requirements.txt
+└── README.md
 ```
 
 ## 3. Installation & Setup
